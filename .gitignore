@@ -1,0 +1,15 @@
+# ide and editors
+.idea
+.vscode
+
+# dependency
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+node_modules
+
+# bundles
+/dist
+
+# mics
+/dev-scripts

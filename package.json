@@ -1,0 +1,44 @@
+{
+  "name": "node-samp-utils",
+  "version": "1.0.0",
+  "description": "Modern ES6 Promise based SAMP Utils",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build:without-tests": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "npm run build:without-tests",
+    "docs": "typedoc --out docs/refs src/index.ts --gitRevision master"
+  },
+  "homepage": "https://github.com/better-samp/node-samp-utils",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/better-samp/node-samp-utils.git"
+  },
+  "keywords": [
+    "modern",
+    "promise",
+    "typescript"
+  ],
+  "author": "better-samp",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^18.7.8",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.8",
+    "typedoc": "^0.23.10",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.6.3",
+    "smart-buffer": "^4.2.0"
+  }
+}
