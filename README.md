@@ -6,8 +6,8 @@
 </p>
 <p align="center">Modern ES6 Promise based SAMP Utils</p>
 
-| [📖 References](https://better-samp.github.io/samp-utils/index.html) |
-|----------------------------------------------------------------------|
+| [📖 References](https://better-samp.github.io/samp-utils/refs/index.html) |
+|---------------------------------------------------------------------------|
 
 <p align="center">
  <a href="https://npmjs.com/package/samp-utils">
@@ -31,7 +31,7 @@ pnpm add samp-utils
 
 ## Usage 🔧
 
-Check all available methods in [📖 References](https://better-samp.github.io/samp-utils/index.html).
+Check all available methods in [📖 References](https://better-samp.github.io/samp-utils/refs/index.html).
 
 ```js
 code example
