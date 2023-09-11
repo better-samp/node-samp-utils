@@ -1,12 +1,19 @@
 import {Resolver} from 'dns';
 
-export const IPv4ToNumber = (ip: string) => {
+export const IPv4ToNumber = (ip: string, le = true) => {
   const a = ip.split('.');
   const buffer = new ArrayBuffer(4);
   const dv = new DataView(buffer);
   for (let i = 0; i < 4; i++)
     dv.setUint8(i, +a[i]);
-  return dv.getUint32(0, true);
+  return dv.getUint32(0, le);
+};
+
+export const NumberToIPv4 = (num: number, le = true) => {
+  const buffer = new ArrayBuffer(4);
+  const dv = new DataView(buffer);
+  dv.setUint32(0, num, le);
+  return `${dv.getUint8(0)}.${dv.getUint8(1)}.${dv.getUint8(2)}.${dv.getUint8(3)}`;
 };
 
 export const isStringAIPv4 = (str: string): boolean => /^((([01]?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\.){3})(([01]?[0-9]{1,2}|2[0-4][0-9]|25[0-5]))$/.test(str);

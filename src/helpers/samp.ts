@@ -1,5 +1,5 @@
 import {SmartBuffer} from 'smart-buffer';
-import {IPv4ToNumber} from '~/helpers/net';
+import {IPv4ToNumber, NumberToIPv4} from '~/helpers/net';
 import {Buffer} from 'buffer';
 
 export const SAMP_HEADER = 0x504D4153;
@@ -34,9 +34,7 @@ export const deserializeSAMPOpcodePacket = (buf: Buffer): DeserializeSAMPOpcodeP
   const bs = SmartBuffer.fromBuffer(buf);
   if (bs.readUInt32LE() !== SAMP_HEADER) return null;
   const numericIp = bs.readUInt32LE();
-  const ipBuff = Buffer.alloc(4);
-  ipBuff.writeUInt32LE(numericIp);
-  const ip = `${ipBuff[3]}.${ipBuff[2]}.${ipBuff[1]}.${ipBuff[0]}`;
+  const ip = NumberToIPv4(numericIp);
   return {
     ip,
     numericIp,
