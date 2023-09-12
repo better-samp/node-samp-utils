@@ -1,5 +1,5 @@
 {
-  "name": "node-samp-utils",
+  "name": "samp-utils",
   "version": "1.0.0",
   "description": "Modern ES6 Promise based SAMP Utils",
   "main": "./dist/index.js",
