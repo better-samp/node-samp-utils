@@ -63,7 +63,7 @@ export class FavouriteList {
     });
   }
 
-  private servers: SampFavouriteServer[] = [];
+  private readonly servers: SampFavouriteServer[] = [];
 
   constructor(opts: FavouriteListOptions = {}) {
     if (opts.servers) this.servers = opts.servers;
