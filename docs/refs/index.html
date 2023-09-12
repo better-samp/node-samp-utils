@@ -23,7 +23,7 @@
 <table>
 <thead>
 <tr>
-<th><a href="https://better-samp.github.io/samp-utils/refs/index.html">📖 References</a></th>
+<th><a href="https://better-samp.github.io/node-samp-utils/refs/index.html">📖 References</a></th>
 </tr>
 </thead>
 </table>
@@ -46,7 +46,7 @@
 <a href="#usage-🔧" id="usage-🔧" style="color: inherit; text-decoration: none;">
   <h2>Usage 🔧</h2>
 </a>
-<p>Check all available modules in <a href="https://better-samp.github.io/samp-utils/refs/index.html">📖 References</a>.</p>
+<p>Check all available modules in <a href="https://better-samp.github.io/node-samp-utils/refs/index.html">📖 References</a>.</p>
 <pre><code class="language-js"><span class="hl-3">import</span><span class="hl-1"> {</span><span class="hl-4">SampQuery</span><span class="hl-1">} </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;samp-utils&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">query</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-7">SampQuery</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">host:</span><span class="hl-1"> </span><span class="hl-2">&#39;samp.sr.team&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">port:</span><span class="hl-1"> </span><span class="hl-8">1337</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">main</span><span class="hl-1"> = </span><span class="hl-5">async</span><span class="hl-1"> () </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">info</span><span class="hl-1"> = </span><span class="hl-3">await</span><span class="hl-1"> </span><span class="hl-4">query</span><span class="hl-1">.</span><span class="hl-7">getServerInfo</span><span class="hl-1">();</span><br/><span class="hl-1">  </span><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-7">log</span><span class="hl-1">(</span><span class="hl-2">`server=</span><span class="hl-5">${</span><span class="hl-4">info</span><span class="hl-9">.</span><span class="hl-4">gameModeName</span><span class="hl-5">}</span><span class="hl-2">, players=</span><span class="hl-5">${</span><span class="hl-4">info</span><span class="hl-9">.</span><span class="hl-4">players</span><span class="hl-5">}</span><span class="hl-2">/</span><span class="hl-5">${</span><span class="hl-4">info</span><span class="hl-9">.</span><span class="hl-4">maxPlayers</span><span class="hl-5">}</span><span class="hl-2">`</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-0">// output: server=Prime-Hack CheatAllowing, players=1/10</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-7">main</span><span class="hl-1">().</span><span class="hl-7">catch</span><span class="hl-1">(</span><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-4">error</span><span class="hl-1">);</span>
 </code></pre>
 </div></div>

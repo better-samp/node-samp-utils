@@ -6,7 +6,7 @@
 </p>
 <p align="center">Modern ES6 Promise based SAMP Utils</p>
 
-| [📖 References](https://better-samp.github.io/samp-utils/refs/index.html) |
+| [📖 References](https://better-samp.github.io/node-samp-utils/refs/index.html) |
 |---------------------------------------------------------------------------|
 
 <p align="center">
@@ -31,7 +31,7 @@ pnpm add samp-utils
 
 ## Usage 🔧
 
-Check all available modules in [📖 References](https://better-samp.github.io/samp-utils/refs/index.html).
+Check all available modules in [📖 References](https://better-samp.github.io/node-samp-utils/refs/index.html).
 
 ```js
 import {SampQuery} from 'samp-utils';
