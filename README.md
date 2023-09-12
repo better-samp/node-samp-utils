@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./.github/samp-utils.png" alt="samp-utils logo">
+  <img src="https://github.com/better-samp/node-samp-utils/raw/master/.github/samp-utils.png" alt="samp-utils logo">
 </p>
 <p align="center">
   <b>samp-utils</b>
