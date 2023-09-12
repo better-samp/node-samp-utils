@@ -31,8 +31,21 @@ pnpm add samp-utils
 
 ## Usage 🔧
 
-Check all available methods in [📖 References](https://better-samp.github.io/samp-utils/refs/index.html).
+Check all available modules in [📖 References](https://better-samp.github.io/samp-utils/refs/index.html).
 
 ```js
-code example
+import {SampQuery} from 'samp-utils';
+
+const query = new SampQuery({
+  host: 'samp.sr.team',
+  port: 1337
+});
+
+const main = async () => {
+  const info = await query.getServerInfo();
+  console.log(`server=${info.gameModeName}, players=${info.players}/${info.maxPlayers}`);
+  // output: server=Prime-Hack CheatAllowing, players=1/10
+};
+
+main().catch(console.error);
 ```
