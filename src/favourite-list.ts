@@ -72,5 +72,25 @@ export class FavouriteList {
   getServers() {
     return this.servers;
   }
+
+  has(server: Pick<SampFavouriteServer, 'ip' | 'port'>) {
+    return this.servers.findIndex(srv => srv.ip === server.ip && srv.port === server.port) > -1;
+  }
+
+  add(server: Partial<SampFavouriteServer> & Pick<SampFavouriteServer, 'ip' | 'port'>) {
+    if (this.has(server)) throw new FavouriteListError('server already exists in list');
+    const srv: SampFavouriteServer = {
+      name: `(Retrieving info...) ${server.ip}:${server.port}`,
+      password: '',
+      rconPassword: '',
+      ...server,
+    };
+    this.servers.push(srv);
+    return srv;
+  }
+
+  get(server: Pick<SampFavouriteServer, 'ip' | 'port'>) {
+    return this.servers.find(srv => srv.ip === server.ip && srv.port === server.port) ?? null;
+  }
 }
 
