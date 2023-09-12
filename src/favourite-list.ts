@@ -41,7 +41,9 @@ export class FavouriteList {
 
   static serialize(servers: SampFavouriteServer[]): Buffer {
     const buff = new SmartBuffer();
-    buff.writeString('SAMP').writeUInt32LE(1);
+    buff.writeString('SAMP')
+      .writeUInt32LE(1)
+      .writeUInt32LE(servers.length);
     const writeString = (text: string) =>
       buff
         .writeUInt32LE(text.length)
