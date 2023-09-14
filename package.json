@@ -11,7 +11,7 @@
   },
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepare": "npm run tsup:build:",
+    "prepare": "npm run tsup:build",
     "tsup:build": "tsup src/index.ts --format esm,cjs --dts",
     "build": "npm run tsup:build",
     "docs": "typedoc --out docs/refs src/index.ts --gitRevision master"
