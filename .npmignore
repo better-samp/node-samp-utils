@@ -3,6 +3,7 @@
 /dev-scripts
 /.github
 /docs
+.idea
 .eslintrc.json
 node_modules
 tsconfig.json
