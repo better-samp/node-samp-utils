@@ -5,7 +5,7 @@
 /docs
 .eslintrc.json
 node_modules
-wtsconfig.json
+tsconfig.json
 pnpm-lock.yaml
 yarn.lock
 package-lock.json
