@@ -2,7 +2,6 @@
 /tests
 /dev-scripts
 /.github
-/.idea
 /docs
 .eslintrc.json
 node_modules
