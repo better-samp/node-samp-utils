@@ -11,8 +11,9 @@
   },
   "types": "dist/index.d.ts",
   "scripts": {
-    "build:without-tests": "tsup src/index.ts --format esm,cjs --dts",
-    "build": "npm run build:without-tests",
+    "prepack": "npm run tsup:build",
+    "tsup:build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "npm run tsup:build",
     "docs": "typedoc --out docs/refs src/index.ts --gitRevision master"
   },
   "homepage": "https://github.com/better-samp/node-samp-utils",
